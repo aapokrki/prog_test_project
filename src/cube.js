@@ -1,4 +1,4 @@
-class Cube {
+export default class Cube {
   constructor(length) {
     this.length = length
   }
@@ -16,6 +16,7 @@ class Cube {
   }
 }
 
-module.exports = {
+/*module.exports = {
   Cube: Cube,
-}
+}*/
+

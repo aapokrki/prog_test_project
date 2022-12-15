@@ -1,5 +1,6 @@
-const Cube = require("../src/cube").Cube
-const expect = require("chai").expect
+//const Cube = import("../src/cube.js").Cube
+import Cube from "../src/cube.js";
+import { expect } from 'chai';
 
 describe("Testing the Cube Functions", function () {
   it("1. The side length of the Cube", function (done) {
