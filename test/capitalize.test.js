@@ -2,7 +2,7 @@ import { default as capitalize } from "../src/capitalize.js";
 import { expect } from 'chai';
 
 
-describe('Capitalize.js', () => {
+describe('Testing capitalize.js', () => {
     it('Should convert the first character of a string to upper case and the remaining characters to lower case', () => {
         expect(capitalize('TEST')).to.equal('Test');
         expect(capitalize('test')).to.equal('Test');
