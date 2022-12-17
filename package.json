@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R"
+    "test": "mocha -R",
+    "test-cover": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 mocha --require blanket --mocha-lcov-reporter | coveralls"
   },
   "author": "",
   "license": "MIT",
