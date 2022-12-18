@@ -7,7 +7,7 @@ const users = [
   { "user": "fred", "active": false },
 ]
 
-// Faulty code: Does not work as intended. Does not count false values
+// Faulty code: Does not work as intended. All returned values are too small by 1.
 describe("Testing countBy.js. Should show number of times each value occurs behind key", () => {
   it("Testing with existing keys", () => {
     expect(countBy(users, (value) => value.active)).to.equal({

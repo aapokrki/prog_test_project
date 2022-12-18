@@ -1,13 +1,34 @@
-# Student template
-
 ## Purpose of this repository
 
-This is a project template for students participating in Software Testing course
+This is a project for students participating in Software Testing course
 at Tampere University.
 
-The repository only contains the source code that is under testing, `package.json` skeleton
-and LICENSE file.
+This repository performs unit tests for 10 functions in the ./src
 
-Source code folder contains a separate license file that must **NOT** be removed under any circumstances!
-Removing this license file directly violates terms and conditions of the software under testing.
-Individuals who remove or modify the license file will also carry the consequences.
+## Tested functions
+
+- capitalize.js
+- ceil.js
+- defaultToAny.js
+- filter.js
+- isEmpty.js
+- reduce.js
+- toNumber.js
+- toString.js
+- words.js
+
+## Testing framework
+
+We use mocha and chai, so the tests are in the `test` folder and named `func.test.js`
+
+## How to run
+
+Instructions for local coverage:
+
+1. Clone or download this repository
+2. `npm install`
+
+3. `npm test` (for only tests)
+4. `npm run coverage` (for coverage report)
+
+The coverage report can be found the ine `/coverage/lcov-report` folder, by opening `index.html`
