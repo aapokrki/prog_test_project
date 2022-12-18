@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "test-nyc": "nyc --reporter=html --reporter=text mocha",
-    "test-cover": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "test-cover": "nyc npm test && nyc report --reporter=text-lcov | coveralls -v",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
