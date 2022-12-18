@@ -19,7 +19,7 @@ This repository performs unit tests for 10 functions in the ./src
 
 ## Testing framework
 
-We use mocha and chai, so the tests are in the `test` folder and named `func.test.js`
+We use mocha and chai, so the tests are in the `test` folder and named in the style of `func.test.js`
 
 ## How to run
 
