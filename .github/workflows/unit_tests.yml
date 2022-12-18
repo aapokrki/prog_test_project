@@ -1,7 +1,6 @@
 on: ["push", "pull_request"]
 
 name: Test workflow
-on: push
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,12 +13,10 @@ jobs:
           node-version: 10.x
 
       - name: Install dependencies, make test-coverage
-        run: |
-          npm install
-          make test-coverage
+          run: npm install
 
       - name: Run tests
-        run: npm test-cover
+          run: npm run test-cover
         
       - name: Coveralls
         uses: coverallsapp/github-action@master
