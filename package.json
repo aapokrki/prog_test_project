@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha ./test/ceil.test.js",
     "coverage": "c8 --all --include=src --exclude=src/.internal --reporter=lcov npm test"
   },
   "author": "",
