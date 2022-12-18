@@ -4,21 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/ceil.test.js",
-    "test-nyc": "nyc --reporter=html --reporter=text mocha",
-    "test-cover": "nyc npm test && nyc report --reporter=text-lcov | coveralls -v",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc mocha ./test/ceil.test.js",
+    "test-cover": "nyc --reporter=lcov --reporter=text mocha ./test/ceil.test.js",
+    "coverage": "nyc report --reporter=lcov | coveralls"
   },
   "author": "",
   "license": "MIT",
   "type": "module",
   "dependencies": {
     "chai": "^4.3.7",
+    "coveralls": "^3.1.1",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0"
   },
   "devDependencies": {
-    "coveralls": "^3.1.1",
     "mocha-lcov-reporter": "^1.3.0"
   }
 }
