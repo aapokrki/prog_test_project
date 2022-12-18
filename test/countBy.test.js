@@ -14,6 +14,8 @@ describe("Testing countBy.js. Should show number of times each value occurs behi
       "true": 2,
       "false": 1,
     })
+  })
+  it("2. Testing with existing key", () => {
     expect(countBy(users, (value) => value.user)).to.equal({
       "barney": 1,
       "betty": 1,
