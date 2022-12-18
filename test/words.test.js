@@ -10,7 +10,6 @@ describe("words.js. Splits string into an array of its words", () => {
     expect(words("")).to.deep.equal([])
   })
   it("3. Testing with empty argument", () => {
-    console.log(typeof val)
     assert.throw(() => words(), TypeError)
   })
 })
