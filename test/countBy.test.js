@@ -9,7 +9,7 @@ const users = [
 
 // Faulty code: Does not work as intended. Does not count false values
 describe("Testing countBy.js. Should show number of times each value occurs behind key", () => {
-  it("1. Testing with existing keys", () => {
+  it("Testing with existing keys", () => {
     expect(countBy(users, (value) => value.active)).to.equal({
       "true": 2,
       "false": 1,
@@ -20,14 +20,13 @@ describe("Testing countBy.js. Should show number of times each value occurs behi
       "fred": 1,
     })
   })
-  //Tästä en tiiä mitä ton pitäs equalaa ku ei oo annettu dokumentaatios
-  it("3. Testing with unexisting keys", () => {
-    assert.throws(() => {
-      countBy(users, (value) => value.passive)
-    }, AssertionError)
+
+  // Unexisting key should return undefined the amount of objects in array
+  // FAULTY CODE: Does not work as intended. returns 2 instead of 3
+  it("Testing with unexisting keys", () => {
+    expect(countBy(users, (value) => value.passive)).to.deep.equal({ "undefined": 3 })
   })
-  //Seuraavakaan ei toimi ku tuo errori tapahtuu jossai tuol countBy.js tiedostos
-  it('2. Testing with nothing as "iteratee" argument', () => {
-    expect(countBy(users)).to.throw(TypeError)
+  it("Testing with empty vector", () => {
+    expect(countBy([], (value) => value.active)).to.deep.equal({})
   })
 })

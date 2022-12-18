@@ -2,7 +2,7 @@ import { default as reduce } from "../src/reduce.js"
 import { expect } from "chai"
 
 describe("reduce.js", () => {
-  it("1. Testing with proper input", () => {
+  it("Testing with proper input", () => {
     expect(reduce([1, 2], (sum, n) => sum + n, 0)).to.equal(3)
     expect(
       reduce(
@@ -16,7 +16,10 @@ describe("reduce.js", () => {
     ).to.deep.equal({ "1": ["a", "c"], "2": ["b"] })
   })
   it
-  it("2. Testing with empty argument", () => {
+  it("Testing with empty argument", () => {
     expect(reduce()).to.equal(undefined)
+  })
+  it("Testing with null value", () => {
+    expect(reduce(null)).to.equal(undefined)
   })
 })
